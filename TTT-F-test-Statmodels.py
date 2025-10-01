@@ -10,7 +10,7 @@ from olsRegressionAnalysis import dispAnalysisOfVariance, tableDispFormatt
 
 path = r'C:\Users\TODO\Desktop\Abhi\AI\AI\allDataSet\bOOK-DataSet\TABLE_3_2_DeliveryTimeData.csv'
 df = pd.read_csv(path)
-df.columns = ['Obs',  'DlvrTime_Y',  'NumCase_X1',  'Dst_X2']
+df.columns = ['Obs', 'DlvrTime_Y',  'NumCase_X1',  'Dst_X2']
 #print(df.head())
 
 y,X = dmatrices('DlvrTime_Y ~ NumCase_X1 + Dst_X2',data=df, return_type='dataframe')
