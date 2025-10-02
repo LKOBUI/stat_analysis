@@ -1,0 +1,121 @@
+OLS Regression Results
+==============================================================================
+Dep. Variable:              DlvTime_Y   R-squared:                       0.960
+Model:                            OLS   Adj. R-squared:                  0.956
+Method:                 Least Squares   F-statistic:                     261.2
+Date:                Wed, 20 Nov 2024   Prob (F-statistic):           4.69e-16
+Time:                        10:46:46   Log-Likelihood:                -63.415
+No. Observations:                  25   AIC:                             132.8
+Df Residuals:                      22   BIC:                             136.5
+Df Model:                           2
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      2.3412      1.097      2.135      0.044       0.067       4.616
+NumCaseX1      1.6159      0.171      9.464      0.000       1.262       1.970
+Dist_X2        0.0144      0.004      3.981      0.001       0.007       0.022
+==============================================================================
+Omnibus:                        0.421   Durbin-Watson:                   1.170
+Prob(Omnibus):                  0.810   Jarque-Bera (JB):                0.010
+Skew:                           0.032   Prob(JB):                        0.995
+Kurtosis:                       3.073   Cond. No.                         873.
+==============================================================================
+
+#  2. Property
+'''
+HC0_se                      White's (1980) heteroskedasticity robust standard errors.
+HC1_se                      MacKinnon and White's (1985) heteroskedasticity robust standard errors.
+HC2_se                      MacKinnon and White's (1985) heteroskedasticity robust standard errors.
+HC3_se                      MacKinnon and White's (1985) heteroskedasticity robust standard errors.
+_HCCM
+
+aic                         Akaike's information criteria. compare models balancing fit and complexity
+                            Lower is Better
+							2k - 2ln(L)
+bic                         Bayes' information criteria. compare models balancing fit and complexity
+                            Lower is Better
+							 k * ln(n) - 2ln(L) 
+							
+centered_tss                The total (weighted) sum of squares centered about the mean.
+condition_number            Return condition number of exogenous matrix.
+
+bse                         standered error. Assume homoskedasticity vaqlues.
+cov_HC0                     Heteroscedasticity robust covariance matrix.
+cov_HC1                     Heteroscedasticity robust covariance matrix.
+cov_HC2                     Heteroscedasticity robust covariance matrix.
+cov_HC3                     Heteroscedasticity robust covariance matrix.
+
+====== Compair test =======
+compare_f_test
+compare_lm_test 
+compare_lr_test
+
+====== Confidance Interval & Covariance =======
+'conf_int', 
+'conf_int_el',  Compute the confidence interval using Empirical Likelihood.
+
+'cov_HC0', 'cov_HC1', 'cov_HC2', 'cov_HC3', 
+'cov_kwds', 'cov_params', 'cov_type', 
+
+
+
+eigenvals                   Return eigenvalues sorted in decreasing order.
+ess                         The explained sum of squares.
+
+f_test
+f_pvalue                    The p-value of the F-statistic.
+fittedvalues                The predicted values for the original (unwhitened) design.
+fvalue                      F-statistic of the fully specified model.
+
+pvalues                     The two-tailed p values for the t-stats of the params.
+llf                         Log-likelihood of model
+tvalues                     Return the t-statistic for a given parameter estimate.
+use_t                       Flag indicating to use the Student's distribution in inference.
+
+====== DoF =======
+'df_model', 
+'df_resid', 
+
+'model'
+mse_model                   Mean squared error the model.
+mse_resid                   Mean squared error of the residuals.
+mse_total                   Total mean squared error.
+ssr                         Sum of squared (whitened) residuals.
+
+resid                       The residuals of the model.
+resid_pearson               Residuals, normalized to have unit variance.
+wresid                      The residuals of the transformed/whitened regressand and regressor(s).
+rsquared                    R-squared of the model.
+rsquared_adj                Adjusted R-squared.
+
+nobs                        Number of observations n.
+uncentered_tss              Uncentered sum of squares.
+
+===== Regression cofficient =========
+'params', 
+===== Regression predicted  =========
+'predict',
+===== Regression P Val      ========= 
+'pvalues',
+'''
+
+res.params
+'NOBS: ',res.nobs
+'SSR: ',res.ssr,
+'ESS: ',res.ess,
+' MSE models: ',res.mse_model,
+' MseResidual',res.mse_resid,
+'DoF Modesl: ',res.df_model,
+'DoF ERR: ',res.df_resid
+' fval: ',res.fvalue,
+' fpval: ',res.f_pvalue,
+'Cofficient: ',res.params
+                     __________________________________________________________________________________
+                    |  Regressor/SSR/ESS  |   Residual/SSres/SSE   |          Totals                   |
+____________________| [res.df_model,      |   res.df_resid,        |     (res.df_model+res.df_resid)], |
+                    |----------------------------------------------------------------------------------| 
+'Sum Of Square(SS)':| [res.ess,           |   res.ssr,             |      res.ess+res.ssr],            |
+--------------------|---------------------|------------------------|-----------------------------------|
+'Mean Square(MS)':  | [res.mse_model,     |   res.mse_resid,       |      res.mse_model+res.mse_resid],|
+--------------------|-----------------------------------------------------------------------------------
