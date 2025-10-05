@@ -1,0 +1,41 @@
+About Dataset
+This dataset represents a collection of electromagnetic interference (EMI) signals and normal (un-affected) signals designed for classification tasks, with each signal consisting of 4000 -time steps. The amplitudes are represented in milli Volts (mV). It includes 8 distinct classes of EMI signals and normal signals, which represents electrical conditions and faults (Total 9 classes). Features are represented as raw signal values, capturing the temporal and amplitude characteristics of EMI patterns. Labels provide a categorical representation of the signal type, enabling supervised learning applications. This dataset is ideal for developing and evaluating signal processing and classification algorithms in fault detection, condition monitoring, and predictive maintenance systems.
+
+Classes and Their Characteristics
+The dataset includes 9 classes, each representing a unique type of EMI-related signal or condition:
+
+Arcing:
+Represents high-frequency bursts caused by electrical arcing.
+Signal characteristics: Periodic spikes with moderate noise.
+
+Corona:
+Caused by ionization of air around high-voltage conductors.
+Signal characteristics: Continuous low-amplitude sinusoidal waveforms.
+
+Partial Discharge (PD):
+Represents localized electrical discharges that do not fully bridge the insulation.
+Signal characteristics: Sudden impulses, irregular patterns.
+
+Random Noise:
+Represents background noise unrelated to faults.
+Signal characteristics: Random fluctuations without specific patterns.
+
+Process Noise:
+Noise generated during normal equipment operation.
+Signal characteristics: Low-frequency sinusoidal signals with added noise.
+
+Exciter Pulses:
+High-energy signals associated with equipment excitation systems.
+Signal characteristics: High-amplitude periodic bursts.
+
+Micro Sparking:
+Tiny discharges resulting in low-amplitude oscillations.
+Signal characteristics: Low-frequency modulated waves.
+
+Data Modulation:
+Represents signals affected by external modulation.
+Signal characteristics: Combination of low- and high-frequency components.
+
+Normal (Unaffected):
+Signals recorded from unaffected equipment.
+Signal characteristics: Flat or near-zero values with minimal noise.
