@@ -1,0 +1,4 @@
+An indicator variable, also known as a dummy variable, is a 
+binary variable (takes values of 0 or 1) used to represent 
+qualitative or categorical data in quantitative analysis, 
+such as regression. 
