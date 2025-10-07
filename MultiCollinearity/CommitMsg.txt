@@ -1,0 +1,5 @@
+Multicollinearity in machine learning refers to a situation where 
+two or more independent variables (features) are highly correlated 
+with each other. This can cause problems in models that assume feature 
+independence—especially linear models like linear regression, logistic 
+regression, and ridge regression.
