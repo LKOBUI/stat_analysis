@@ -1,0 +1,9 @@
+Gender,Type,Prior,PrisonSentenceYES,PrisonSentenceNO
+Male,Business,Some,28,59
+Male,Business,None,7,35
+Male,Home,Some,19,75
+Male,Home,None,27,200
+Female,Business,Some,14,50
+Female,Business,None,10,40
+Female,Home,Some,14,100
+Female,Home,None,27,159
