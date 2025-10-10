@@ -1,0 +1,5 @@
+Calculate Confidence Interval
+
+- Estimation of the mean response (Regressions coefficient)
+- Confidence Interval On new observations
+- Standard Error (SE) of estimated coefficient
