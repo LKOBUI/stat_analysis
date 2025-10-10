@@ -1,0 +1,4 @@
+Regularization is very Impotent topic
+in regressions analysis. We can use
+regularization in Ridge regressions and 
+Lasso. 
