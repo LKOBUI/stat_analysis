@@ -1,0 +1,5 @@
+We added only data set to perform
+lack of fit test. Also I have added
+research paper.
+TODO
+ - Perform Lack Of fit test
