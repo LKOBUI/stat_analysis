@@ -1,0 +1,3 @@
+Understand Decisions Tree
+Entropy Gain
+Decisions tree Implementations
