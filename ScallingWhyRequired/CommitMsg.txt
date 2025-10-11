@@ -1,0 +1,13 @@
+Scaling is a crucial preprocessing step in machine learning 
+because it ensures that all features contribute equally to the 
+model's learning process.
+
+Unit norm scaling (also called vector normalization) is a technique 
+that transforms each data point (usually a row vector) so that its 
+norm (length) becomes 1. This is especially useful when the direction 
+of the data matters more than its magnitude.
+
+Unit length scaling—also known as scaling to unit norm or vector normalization—is 
+a technique where each data point (typically a row vector) is rescaled so that 
+its length (norm) becomes 1. This is especially useful when the direction of 
+the vector matters more than its magnitude.
