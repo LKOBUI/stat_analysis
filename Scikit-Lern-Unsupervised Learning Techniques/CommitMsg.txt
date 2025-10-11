@@ -1,0 +1,9 @@
+Unsupervised learning is a type of machine learning where 
+the algorithm is given unlabeled data and must find patterns, 
+structures, or relationships without any predefined outputs 
+or categories.
+
+Understand
+ DBSCAN
+ Gaussian Mixture
+ K-Mean
