@@ -1,0 +1,4 @@
+Gradient Descent is the core optimization algorithm used in many machine 
+learning models to minimize a cost or loss function. Think of it as a way 
+for your model to "learn" by gradually adjusting its parameters to reduce 
+errors.
