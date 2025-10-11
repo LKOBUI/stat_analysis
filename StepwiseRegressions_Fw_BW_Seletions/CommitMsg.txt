@@ -1,0 +1,3 @@
+Forward and backward regression typically refer to feature 
+selection techniques used in linear modeling—not to be confused 
+with forward/backward propagation in neural networks.
