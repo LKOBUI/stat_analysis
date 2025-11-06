@@ -1,0 +1,15 @@
+Dataset details
+Source: Information from passengers who were aboard the Titanic during its 1912 maiden voyage. 
+Primary Goal: Predict whether a passenger survived or not based on features like age, gender, class, and fare
+
+Survived: Binary variable indicating survival (1) or not (0). 
+Pclass: Ticket class (1st, 2nd, or 3rd). 
+Name: The name of the passenger. 
+Sex: Gender of the passenger. 
+Age: The passenger's age. 
+SibSp: Number of siblings or spouses aboard. 
+Parch: Number of parents or children aboard. 
+Ticket: Ticket number. 
+Fare: Amount of money paid for the ticket. 
+Cabin: Cabin number. 
+Embarked: Port of embarkation (C, Q, or S). 

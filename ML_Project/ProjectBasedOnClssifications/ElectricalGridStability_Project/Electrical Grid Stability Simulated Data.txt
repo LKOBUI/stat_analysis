@@ -1,0 +1,64 @@
+About Dataset
+Data and information taken from UCI Machine Learning Repository's Electrical Grid Stability Simulated Data Data Set
+
+Abstract: The local stability analysis of the 4-node star system (electricity producer is in the center) implementing Decentral Smart Grid Control concept.
+
+Source:
+-- Creator and donor: Vadim Arzamasov (vadim.arzamasov '@' kit.edu),
+Department of computer science,
+Karlsruhe Institute of Technology;
+Karlsruhe, 76131; Germany
+-- Date: November, 2018
+
+Data Set Information:
+The analysis is performed for different sets of input values using the methodology similar to that described in [Schäfer, Benjamin, et al. 'Taming instabilities in power grid networks by decentralized control.' The European Physical Journal Special Topics 225.3 (2016): 569-582.]. Several input values are kept the same: averaging time: 2 s; coupling strength: 8 s^-2; damping: 0.1 s^-1
+
+Attribute Information:
+11 predictive attributes, 1 non-predictive(p1), 2 goal fields:
+
+tau[x]: reaction time of participant (real from the range [0.5,10]s). 
+        Tau1 - the value for electricity producer.
+        Reaction time in an electrical grid varies from milliseconds 
+        to minutes and depends on the event, the equipment involved, 
+        and the control system's sophistication. 
+        For a simple event, it can be a fraction of a cycle, 
+        as with some reactive power calculations. However, 
+        for larger disturbances, the time can be significantly 
+        longer (seconds to minutes) due to the response of primary 
+        and secondary controls, especially when integrating renewable 
+        energy sources. 
+
+        Fast response: Some reactive power calculations can have a reaction 
+                       time of a quarter of a cycle, which is very fast. 
+        Slower response: The response time for grid-level frequency control, 
+                       which involves primary and secondary controls, can be in 
+                       the order of seconds to minutes. 
+
+p[x]: nominal power consumed(negative)/produced(positive)(real). 
+      For consumers from the range [-0.5,-2]s^-2; p1 = abs(p2 + p3 + p4)
+      Nominal power in an electrical grid system is the designed or average 
+      power consumption, which is different from the maximum or rated power. 
+      Nominal power is the typical, average power used, while rated power 
+      is the maximum power a device can handle without damage.
+
+g[x]: coefficient (gamma) proportional to price elasticity 
+      (real from the range [0.05,1]s^-1). g1 - the value for electricity producer.
+      In some mathematical models used to describe the stability of decentralized 
+      smart grids, a coefficient denoted by gamma is used as a factor proportional 
+      to the price elasticity of demand
+
+stab: the maximal real part of the characteristic equation root 
+      (if positive - the system is linearly unstable)(real)
+      The maximum real part of the characteristic equation's roots, 
+      also known as the dominant eigenvalue, is a critical parameter 
+      for determining the stability of an electrical grid. 
+stabf: the stability label of the system (categorical: stable/unstable)
+Relevant Papers:
+      Arzamasov, Vadim, Klemens Bähm, and Patrick Jochem. 'Towards Concise 
+      Models of Grid Stability.' Communications, Control, and Computing Technologies 
+      for Smart Grids (SmartGridComm), 2018 IEEE International Conference on. IEEE, 2018
+(Section V-A)
+
+Citation Request:
+      We thank Dr. Benjamin Schäfer for helping us with the initial version of 
+      the code used for simulations.
