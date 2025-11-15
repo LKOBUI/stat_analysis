@@ -1,0 +1,14 @@
+Calostrol_Project:
+DiseaseOutbreak:
+ElectricalGridStability_Project:
+Fashion_MNIST:
+Irish_Project:
+leukemia_remission:
+ - Data analysis not done yet
+ - Statmodels analysis done, by using Binomials Glm with Logit Link
+ - Need to do models with another exponential family
+ - Understand subject knwolade so that we can understand more about 
+   statical analyzed dataset
+Mnist_Project:
+Titenic_Project:
+Wine_Project:
