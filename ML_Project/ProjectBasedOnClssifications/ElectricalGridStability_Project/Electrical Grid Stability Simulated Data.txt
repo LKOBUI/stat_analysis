@@ -62,3 +62,18 @@ Relevant Papers:
 Citation Request:
       We thank Dr. Benjamin Schäfer for helping us with the initial version of 
       the code used for simulations.
+
+================================================================================
+Qus1: how the power consumed the electrical grid stability?
+
+Ans: Power consumption impacts electrical grid stability by 
+     creating a constant need to balance supply and demand 
+     to maintain consistent frequency and voltage.
+	 
+	 Supply and demand equilibrium: 
+	 For the grid to be stable, the amount of electricity 
+	 generated must perfectly match the amount being consumed 
+	 at any given moment.
+     
+	 
+	 
