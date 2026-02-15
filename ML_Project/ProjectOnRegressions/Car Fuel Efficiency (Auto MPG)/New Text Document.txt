@@ -1,0 +1,23 @@
+Auto-mpg dataset
+Kaggle link: https://www.kaggle.com/datasets/uciml/autompg-dataset
+Modes: OLS models
+two_line_org:  Two line solutions regressions equations models with regressor variable origin considered as a categorical variable.
+two_line_org_bc: Two line solutions regressions equations models apply box-cox transformations on y & regressor variable origin considered as a categorical    
+                 variable. 
+one_line_org: Single line solutions regressions equations models only origin considered as a categorical variable. 
+one_line_org_bc:  Single line solutions regressions equations models apply box-cox transformations on y & only origin considered as a categorical variable. 
+one_line_org_cyl: Single line solutions regressions equations models now regressor variable origin & cylinder considered as a categorical
+two_line_org_cyl: Two line solutions regressions equations models now regressor variable origin & cylinder considered as a categorical
+one_line_org_cyl_bc: Two line solutions regressions equations models apply box-cox transformations on y & regressor variable origin & cylinder considered as a categorical
+
+Additions nots:
+Before going to understand residuals analysis, we must have idea about with some Mathematical terms
+
+write functions to calculate following state. return result pandas series where index are the test name
+statsmodels.stats.stattools.durbin_watson
+statsmodels.stats.stattools.jarque_bera
+statsmodels.stats.stattools.omni_normtest
+statsmodels.stats.stattools.medcouple
+statsmodels.stats.stattools.robust_skewness
+statsmodels.stats.stattools.robust_kurtosis
+tatsmodels.stats.stattools.expected_robust_kurtosis
