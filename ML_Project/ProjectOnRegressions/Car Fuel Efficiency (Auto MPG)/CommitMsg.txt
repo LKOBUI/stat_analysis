@@ -1,0 +1,6 @@
+Add Auto MPG dataset and initial preprocessing
+
+- Included Auto MPG dataset for regression analysis
+- Performed basic data cleaning (handling missing values, renaming columns)
+- Added exploratory analysis scripts (summary statistics, distributions)
+- Prepared features for model training (normalization, encoding categorical variables)
