@@ -1,4 +1,0 @@
-Topic Included
-Polynomials in one variable i.e. Pricewise polynomials.
-Kernel regressions
-Polynomials more than one variable
