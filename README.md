@@ -1,4 +1,4 @@
-# stat_analysis
+# Regression Analysis with Applied Statistics and Detailed Mathematical Foundations
 
 Here is a comprehensive directory breakdown and structural tree for the LKOBUI/stat_analysis repository. 
 This repository focuses on the mathematical foundations, diagnostic tools, and practical implementations 
