@@ -1,5 +1,0 @@
-- Newton Raphson Method
-- Newton-Gauss Method Theorem 
-  - TODO
-- Puromycin Data
-- Apply Nonlinear Method in Regressions
