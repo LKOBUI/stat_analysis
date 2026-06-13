@@ -111,6 +111,265 @@ $$\text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \alpha \sum_{j=1}^{m} \beta
 * **Alpha Path Inspection:** The notebook plots the *regularization path*, showing how individual feature coefficients drop as $\alpha$ increases from $0$ to large values.
 * **Validation:** Utilizing tools like `RidgeCV` or manual $k$-fold cross-validation loops, it calculates evaluation parameters (such as Root Mean Squared Error (RMSE) or $R^2$) across a spectrum of alpha possibilities to select the parameter that yields the highest generalization on test data.
 
+# D). comprehensive data science workflow on housing project
+housing-project-statistical-data-analysis.ipynb Primary Learning Goal, Design, build, and optimize an end-to-end predictive statistical framework using multi-variable regression models.
+
+## Detailed Summary & Analysis Methods
+
+The `housing-project-statistical-data-analysis.ipynb` notebook implements a comprehensive data science workflow to extract insights and predict housing market valuations. It leverages an analytical approach structured across the following methodologies:
+
+### 1. Preprocessing & Descriptive Analysis
+
+* **Statistical Summaries**: Employs structural functions (e.g., `describe()`, `info()`) to map out numeric types, dataset scope, and missing entries.
+* **Feature Scale Check**: Assesses the necessity of scaling metrics to standardise independent variables across differing units.
+
+### 2. Visual & Structural EDA
+
+* **Scatterplot Matrix & Pair Plots**: Visualises multidimensional feature spaces to map out initial linear or non-linear trend directions (mental visualization).
+* **Trend Analysis**: Evaluates the immediate visual impact of continuous features (such as spatial size or regional location indicators) on the target housing valuations.
+
+### 3. Data Cleansing & Outlier Filtering
+
+* **Tukey’s IQR Method**: Computes the Interquartile Range ($\text{IQR} = Q3 - Q1$) to identify anomalies. Data points falling below $Q1 - 1.5 \times \text{IQR}$ or exceeding $Q3 + 1.5 \times \text{IQR}$ are isolated and pruned.
+* **Boxplot Verification**: Uses distribution boxplots to visually cross-verify the presence, volume, and elimination of extreme market anomalies.
+### 4. Multicollinearity & Diagnostic Checks
+
+* **Predictor Independence**: Checks for high inter-correlation between separate independent features. This safeguards the stability of the regression coefficients against confounding variances.
+* **Feature Interaction Mapping**: Checks distribution matrices to guarantee that predictive elements accurately capture individual market signals.
+### 5. Inferential & Predictive Regression Modeling
+
+* **Supervised Linearity Mapping**: Employs Simple and Multiple Linear Regression models ($\text{Price} = \beta_0 + \beta_1 X_1 + \dots + \epsilon$) to establish explicit mathematical relationships.
+* **Validation Benchmarking**: Splits datasets systematically into separate training sets (model learning phase) and validation test partitions.
+* **Goodness-of-Fit Verification**: Measures the ultimate predictive success through explicit statistical metrics:
+    * **Coefficient of Determination ($R^2$)**: Quantifies the percentage of target housing variance explained by the features.
+    * **Mean Absolute Error (MAE) & Root Mean Squared Error (RMSE)**: Pinpoints error variances and penalises larger deviations to reflect real-world financial miscalculations.
+
+# E). Design, train, and optimize Deep Learning neural networks  on smart grid:
+Design, train, and optimize Deep Learning neural networks for regression tasks, specifically focusing on grid power prediction and automated hyperparameter tuning frameworks.
+## Detailed Summary & Hyperparameter Tuning Methods
+
+The `neural-models-for-grid-power.ipynb` notebook shifts away from traditional statistical models to explore non-linear relationship modeling using Artificial Neural Networks (ANNs) for smart-grid nominal power tracking.
+
+### 1. Core Objectives & Workflow
+
+* **Problem Domain**: Predict nominal power outputs within a smart-grid infrastructure using system parameters.
+* **Pipeline Structure**: Features typical deep learning steps including data preparation, tensor reshaping, network compilation, validation splitting, and evaluation tracking.
+
+### 2. Hyperparameter Tuning & Modeling Methods
+
+To find the most efficient model architecture and avoid manual trial-and-error, the notebook implements automated structural optimizations:
+* **Framework Utilities**: Uses tuning wrappers (such as `Keras Tuner` or custom `scikit-learn` grid search hooks) to systematically iterate through architectural variations.
+* **Search Space Optimization**:
+    * **Layer Depth & Width**: Dynamic testing of the number of hidden layers and the number of neurons per layer (e.g., searching between 32 and 512 nodes).
+    * **Activation Functions**: Benchmarking non-linear activators like `ReLU` or `LeakyReLU` to prevent vanishing gradient issues.
+    * **Optimization & Learning Rates**: Tuning optimizers (like `Adam` or `RMSprop`) alongside variable learning rates (e.g., $10^{-2}$ to $10^{-4}$) to guarantee smooth loss convergence.
+    * **Regularization Over Dropout**: Adjusting dropout percentages (e.g., 0.1 to 0.5) and weight decay ($L_2$ regularization) dynamically to curb overfitting on grid noise.
+### 3. Convergence & Training Evaluation
+
+* **Loss Trackers**: Uses Mean Squared Error (MSE) or Mean Absolute Error (MAE) as target loss objectives during structural search iterations.
+* **Early Stopping Integration**: Utilizes callback hooks to halt tuning trials early if validation loss plateaus, preserving computing resources.
+
+# F). Outlier-detection with robust mathematical filtering:
+Understand and implement robust mathematical filtering algorithms to identify, isolate, and remove anomalies in real estate datasets before statistical modeling.
+## Detailed Summary & Mathematical Approach
+
+The `outlier-detection-in-house-prices.ipynb` notebook focuses heavily on the diagnostic side of data science. It demonstrates how extreme mathematical deviations distort linear trends and how to systematically clean them.
+
+### 1. Core Objectives & Workflow
+
+* **Problem Domain**: Eliminating distribution skewness caused by extreme real estate valuations (luxury estates, data errors, or forced sales).
+* **Pipeline Structure**: Features baseline data distribution checks, parallel mathematical outlier filtering, and a final look at how these actions change regression stability.
+### 2. Mathematical Approaches for Outlier Detection
+
+The notebook applies specific statistical frameworks to measure and flag extreme values:
+
+* **Z-Score Method (Parametric)**:
+    * Assumes a roughly Gaussian (normal) distribution of house prices.
+    * Calculates the distance of a data point from the mean using standard deviations:
+
+$$Z = \frac{x - \mu}{\sigma}$$
+
+    * *Where*: $x$ is the asset value, $\mu$ is the population mean, and $\sigma$ is the standard deviation.
+    * Points with an absolute value $|Z| > 3$ are flagged as statistical outliers.
+* **Tukey’s Interquartile Range (IQR) Method (Non-Parametric)**:
+    * Does not assume normal distribution, making it highly effective for skewed real estate data.
+    * Calculates the spread between the 75th percentile ($Q_3$) and the 25th percentile ($Q_1$):
+
+$$\text{IQR} = Q_3 - Q_1$$
+
+    * Establishes lower and upper mathematical boundaries:
+
+$$\text{Lower Bound} = Q_1 - 1.5 \times \text{IQR}$$
+
+$$\text{Upper Bound} = Q_3 + 1.5 \times \text{IQR}$$
+
+    * Data points outside this envelope are systematically pruned.
+* **Mahalanobis Distance (Multivariate Tracking)**:
+    * Looks beyond single-column limits to find structural outliers across multiple dimensions at once (e.g., a tiny 1-bedroom house costing $5 million).
+    * Evaluates distance while accounting for the covariance matrix ($\Sigma$) of the features:
+
+$$D_M(x) = \sqrt{(x - \mu)^T \Sigma^{-1} (x - \mu)}$$
+### 3. Impact Assessment
+
+* **Skewness & Kurtosis Check**: Measures the asymmetry and peakedness of the price distributions before and after applying the formulas.
+* **Residual Variance Improvement**: Demonstrates how shrinking your dataset to normal mathematical bounds decreases error variance in ordinary least squares (OLS) estimations.
+
+# G).  Generalized Linear Models (GLMs)
+ Understand and apply Generalized Linear Models (GLMs) to transcend ordinary linear regressions, mapping target boundaries mathematically to handle non-Gaussian errors or constrained outputs.
+
+## Detailed Summary & Mathematical Approach
+
+The `prediction-with-glm-statistical-analysis.ipynb` notebook implements robust parametric modeling using the GLM framework (typically powered by `statsmodels.api.GLM`). This notebook addresses scenarios where standard Ordinary Least Squares (OLS) assumptions fall short—specifically when error residuals do not display homoscedasticity or a strict normal distribution.
+
+### 1. Core Objectives & Workflow
+
+* **Problem Domain**: Modeling target conditions bounded by non-linear constraints (such as non-negative valuations or bounded probabilities) using structured real estate or risk features.
+* **Pipeline Structure**: Encompasses structural data mapping, defining exponential family targets, maximum likelihood estimations, and diagnostic deviance checks.
+### 2. Mathematical Foundations of GLM
+
+Unlike classic linear algorithms ($Y = X\beta + \epsilon$), GLMs relax structural boundaries by defining three strict mathematical components:
+
+* **The Random Component (Target Conditional Distribution)**:
+    The conditional distribution of the target variable $Y$, given predictors $X$, must belong to the Exponential Dispersion Family. Its probability density function is written mathematically as:
+
+$$f(y; \theta, \phi) = \exp \left( \frac{y\theta - b(\theta)}{a(\phi)} + c(y, \phi) \right)$$
+
+    * *Where*: $\theta$ represents the natural (canonical) parameter, $\phi$ is the dispersion parameter, and $b(\theta)$ is a log-partition function tracking the conditional mean ($\mu = E[Y] = b'(\theta)$). Common target choices configured inside the repository include Gaussian, Gamma, or Poisson profiles.
+* **The Systematic Component (Linear Predictor)**:
+    Combines independent variables into a standardized vector notation, mapping individual weights to input metrics:
+
+$$\eta = X^T\beta = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k$$
+
+* **The Link Function ($g(\cdot)$)**:
+    Connects the systematic linear component $\eta$ directly to the expected target mean $\mu$:
+
+$$\eta = g(\mu) \implies \mu = g^{-1}(X^T\beta)$$
+The notebook leverages specific canonical links depending on data structure goals:
+
+*   **Log Link ($g(\mu) = \ln(\mu)$)**: Used for continuous non-negative pricing or count outputs to ensure exponentiated structural parameters ($\mu = e^{X^T\beta}$) are strictly positive.
+*   **Logit Link ($g(\mu) = \ln(\frac{\mu}{1-\mu})$)**: Standard for binary/fractional probabilities mapping outputs explicitly inside an open $[0, 1]$ boundary.
+
+### 3. Mathematical Optimization & Diagnostics
+
+*   **Iteratively Reweighted Least Squares (IRLS)**: Since non-Gaussian GLMs often do not yield exact closed-form analytical solutions, parameters ($\hat{\beta}$) are optimized using numerical Maximum Likelihood Estimation (MLE) iteratively via Newton-Raphson or IRLS routines.
+*   **Goodness-of-Fit Deviance**: Rather than tracking standard residual variance sums, the algorithm determines structural errors using Deviance ($D$), calculating log-likelihood deviations ($L$) relative to a perfect saturated model ($L_{sat}$):
+
+$$D = -2 \left( \ell(\hat{\beta}) - \ell_{sat} \right)$$
+
+*   **Pearson Residual Scale Check**: Scaled to check variations across fluctuating conditional targets:
+
+$$r_P = \frac{y_i - \hat{\mu}_i}{\sqrt{\text{Var}(\hat{\mu}_i)}}$$
+
+# H). Parametric regression modeling:
+Master parametric regression modeling and structural hypothesis testing to evaluate smart-grid load constraints and predict continuous nominal power values.
+## Detailed Summary & Mathematical Approach
+
+The `statistical-models-for-grid-power.ipynb` notebook implements a comprehensive statistical framework using traditional linear estimators (typically via `statsmodels.api.OLS` and `scikit-learn`). It serves as a rigorous parametric baseline for smart-grid nominal power tracking, ensuring that structural data properties satisfy core econometric assumptions.
+
+### 1. Core Objectives & Workflow
+
+*   **Problem Domain**: Predict continuous electrical grid nominal power output using structural operational parameters (e.g., system thermal metrics, node variables, or supply load capacity).
+*   **Pipeline Structure**: Features comprehensive data parsing, structural diagnostic checks, Ordinary Least Squares (OLS) coefficient optimization, and statistical validation reporting.
+### 2. Mathematical Modeling Framework
+
+The notebook approaches grid power prediction using classical parametric equations rather than black-box algorithms, maintaining full structural interpretability:
+
+*   **Multiple Linear Regression (MLR)**:
+    Models the nominal power output $Y$ as a linear combination of system predictors $X_i$ paired with a Gaussian error term:
+
+$$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_k X_k + \epsilon$$
+
+    *Where*: $\beta_0$ represents the intercept, $\beta_i$ represent the calculated feature effects (coefficients), and $\epsilon$ represents the structural error vector.
+
+*   **Ordinary Least Squares (OLS) Estimation**:
+    The parameter vector $\hat{\beta}$ is computed analytically by minimizing the Sum of Squared Residuals (SSR):
+$$\min_{\beta} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \implies \hat{\beta} = (X^T X)^{-1} X^T Y$$
+
+This requires the matrix $(X^T X)$ to be non-singular (invertible), highlighting the importance of the notebook's multicollinearity tracking.
+
+### 3. Gauss-Markov Diagnostic Testing
+
+To guarantee that the calculated OLS parameters represent the **Best Linear Unbiased Estimator (BLUE)**, the pipeline tests foundational mathematical assumptions:
+
+*   **Homoscedasticity Assessment**:
+    Checks that the variance of the error terms remains constant across all predicted power ranges:
+
+$$\text{Var}(\epsilon_i | X) = \sigma^2$$
+This is validated mathematically via the **Breusch-Pagan** or **White test**, checking if residual squares correlate with the input features.
+
+*   **Normality of Residuals**:
+    Ensures error profiles follow a standard Gaussian curve ($\epsilon \sim N(0, \sigma^2)$) to preserve valid hypothesis testing. This is measured using the **Jarque-Bera** statistic, which tests distribution shape deviations:
+
+$$JB = \frac{n}{6} \left( S^2 + \frac{(K - 3)^2}{4} \right)$$
+
+    *Where*: $S$ represents sample skewness and $K$ represents sample kurtosis.
+
+*   **Multicollinearity Flagging via VIF**:
+    Calculates the Variance Inflation Factor (VIF) for each grid parameter to ensure independent feature signals are not distorted by cross-correlations:
+
+$$\text{VIF}_i = \frac{1}{1 - R_i^2}$$
+Features yielding a $\text{VIF} > 5$ to $10$ are flagged for removal to protect coefficient stability.
+
+### 4. Inferential Significance Testing
+
+*   **Student’s t-Test**: Evaluates individual feature impact by asserting the null hypothesis $H_0: \beta_i = 0$ against the calculated standard error ($SE$):
+
+$$t = \frac{\hat{\beta}_i}{SE(\hat{\beta}_i)}$$
+
+*   **F-Test (Overall Fit)**: Evaluates whether the collection of variables predicts nominal grid capacity significantly better than a simple mean baseline model.
+
+# I). : Apply Principal Component Analysis (PCA) 
+ Apply Principal Component Analysis (PCA) to resolve multi-variable correlation instabilities and eliminate multicollinearity within vehicle performance datasets.
+ ## Detailed Summary & Mathematical Approach
+
+The `visual-pca-multicollinearity-in-auto-mpg.ipynb` notebook implements an unsupervised dimensionality reduction pipeline. It directly targets datasets like the classic *Auto MPG* dataset, where engineering attributes (e.g., cylinders, displacement, horsepower, weight) suffer from massive inter-correlations that destabilize Ordinary Least Squares (OLS) regression models.
+
+### 1. Core Objectives & Workflow
+
+*   **Problem Domain**: Mitigating standard error inflation and unstable parameter estimation caused by high multicollinearity among physical engine design features.
+*   **Pipeline Structure**: Encompasses data standardization, covariance matrix formulation, eigenvalue decomposition, variance interpretation visualization, and a final transformed regression mapping.
+
+### 2. Mathematical Framework: Principal Component Analysis (PCA)
+
+To extract orthogonal (uncorrelated) signals, the pipeline systematically shifts the coordinate system of the original features through specific matrix algebra steps:
+
+*   **Z-Score Feature Standardization**:
+    Because PCA is highly sensitive to the scaling and units of features, data columns are centered and scaled to have a mean ($\mu$) of 0 and a standard deviation ($\sigma$) of 1:
+
+$$Z = \frac{X - \mu}{\sigma}$$
+
+*   **Covariance Matrix Computation**:
+    The algorithm constructs an $n \times n$ covariance matrix ($\Sigma$) from the scaled matrix $Z$ to quantify the structural linkages between every pair of features:
+
+$$\Sigma = \frac{1}{m - 1} Z^T Z$$
+    *Where*: $m$ is the total number of vehicles/samples, and $n$ is the number of continuous engine metrics.
+
+*   **Eigendecomposition (Spectral Mapping)**:
+    The notebook solves the fundamental characteristic equation to break the covariance structure down into its core directional components:
+
+$$\Sigma v = \lambda v \implies (\Sigma - \lambda I)v = 0$$
+
+    *   **Eigenvalues ($\lambda_i$)**: Scalar measures representing the amount of data variance captured along each newly derived axis.
+    *   **Eigenvectors ($v_i$)**: Orthogonal directional vectors (loadings) used to project the original features into the new coordinate space.
+
+*   **Dimensionality Selection & Variance Distribution**:
+    The script calculates the Explained Variance Ratio (EVR) for each principal component to choose how many dimensions to keep while minimizing information loss:
+$$\text{EVR}_i = \frac{\lambda_i}{\sum_{j=1}^{n} \lambda_j}$$
+
+This distribution is plotted on a visual Scree Plot, allowing engineers to retain the top $k$ components (where $k < n$) that capture the vast majority of the total dataset variance.
+
+### 3. Resolving Multicollinearity for Regression
+
+*   **Orthogonal Projection Transformation**:
+    The original standardized data is multiplied by the chosen feature weight matrix ($W_k$) containing the top $k$ eigenvectors:
+
+$$\text{Scores} = Z \cdot W_k$$
+*   **Eliminating Covariance**:
+    By design, the cross-correlation between these newly generated component vectors drops to absolute zero ($\text{Cov}(PC_i, PC_j) = 0$ for all $i \neq j$).
+
+*   **Variance Inflation Factor (VIF) Optimization**:
+    Running a regression model on these uncorrelated principal components reduces every single feature's VIF score down to a perfect baseline score of 1.0. This completely eliminates multi-variable instability while preserving strong predictive power for forecasting vehicle fuel efficiency (MPG).
+ 
 ### 5. Performance Benchmarking
 
 * **Final Comparisons:** The regularized Ridge model is evaluated side-by-side with the unconstrained OLS model across test sets.
