@@ -1,8 +1,0 @@
-1. Gradient Decent
-2. Newton Ramshorn Method
-3. Score equations for a GLM
-4. Solution of score equation
-5. Fisher's Scoring algorithm
-6. Iteratively Reweighted Least Squares
-Example: Binomial regression
-Reg-III-IRLS

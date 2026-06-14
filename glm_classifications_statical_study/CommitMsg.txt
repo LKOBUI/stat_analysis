@@ -1,5 +1,0 @@
-Generalized Linear Models (GLMs)
-A Generalized Linear Model has three components:
-- Random Component
-- Systematic Component
-- Link Function
